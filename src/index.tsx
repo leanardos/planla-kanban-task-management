@@ -1,13 +1,13 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
 
-
-function App() {
-  return (
-    <div className="App">
-      <h1>asdas App</h1>
-    </div>
-  );
-}
-
-createRoot(document.getElementById('root')).render(<App />);
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
